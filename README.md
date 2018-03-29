@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 DomoscioViz requires the jQuery Javascript library. Make sure to load jquery.js file before loading DomoscioViz.
 
-```
+```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 ```
 
@@ -18,14 +18,14 @@ DomoscioViz requires the jQuery Javascript library. Make sure to load jquery.js 
 
 Place the following <script>s near the end of your pages, right before the closing </body> tag, to enable them. jQuery must come first, then DomoscioViz, and then your script.
 
-```
+```html
 <script src="https://rawgit.com/Celumproject/domoscio_js/master/v1/DomoscioViz.min.js"></script>
 ```
 
 Then you have to configure the DomoscioViz object like bellow with your credentials to access your enabled APIs. Refer to the API documentation for details:
 https://domoscio.com/wiki/doku.php?id=api2:start
 
-```
+```javascript
 DomoscioViz.configuration = { 
     preproduction: true,
     client_id: YOUR_INSTANCE_ID,
@@ -65,11 +65,15 @@ function iframe_template(url){
 
 ### Fade
 
-You can custom this with jQuery, as the example:
+You can custom this with jQuery, as the example:  
+
+__HTML :__
 
 ```html
 <div id="iframe_container"></div>
-```
+```  
+
+__CSS :__
 
 ```css
 #iframe_container{
@@ -83,7 +87,9 @@ iframe{
     width: 100%; 
     height: 100%;
 }
-```
+```  
+
+__JavaScript :__
 
 ```javascript
 $(function(){
@@ -106,8 +112,8 @@ $(function(){
 
 To deploy this on a live system, use the <script> tag bellow : 
 
-```
-<script src="https://cdn.rawgit.com/Celumproject/domoscio_js/160e555c/v1/DomoscioViz.min.js"></script>
+```html
+<script src="https://cdn.rawgit.com/Celumproject/domoscio-viz-sdk-js/160e555c/v1/DomoscioViz.min.js"></script>
 ```
 
 ## Versioning
