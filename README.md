@@ -19,7 +19,7 @@ DomoscioViz requires the jQuery Javascript library. Make sure to load jquery.js 
 Place the following <script>s near the end of your pages, right before the closing </body> tag, to enable them. jQuery must come first, then DomoscioViz, and then your script.
 
 ```html
-<script src="https://rawgit.com/Celumproject/domoscio_js/master/v1/DomoscioViz.min.js"></script>
+<script src="https://rawgit.com/Celumproject/domoscio-viz-sdk-js/master/v1/domoscioviz.min.js"></script>
 ```
 
 Then you have to configure the DomoscioViz object like bellow with your credentials to access your enabled APIs. Refer to the API documentation for details:
@@ -113,7 +113,7 @@ $(function(){
 To deploy this on a live system, use the <script> tag bellow : 
 
 ```html
-<script src="https://cdn.rawgit.com/Celumproject/domoscio-viz-sdk-js/160e555c/v1/DomoscioViz.min.js"></script>
+<script src="https://cdn.rawgit.com/Celumproject/domoscio-viz-sdk-js/03267c5a/v1/domoscioviz.min.js"></script>
 ```
 
 ## Versioning
