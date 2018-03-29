@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="v1/domoscioviz.js"></script>
+    <style>
+        #iframe_container{
+            width: 500px;
+            height: 500px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        iframe{ width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+    
+    <div id="iframe_container"></div>
+
+    <script>
+    
+        $(function(){
+
+            DomoscioViz.configuration = {
+                preproduction: false,
+                client_id: 1,
+                client_passphrase: "71db8cb5d678ebe8be2d758c17488268"
+            }      
+
+            var iframe_url = DomoscioViz.Chart.get_url("obj_mastery", { chart: "polar", student_id: 1, objective_id: 35 });
+
+            $('#iframe_container').html(viz_loader() + template(iframe_url));
+        
+            $('#iframe_container > iframe').on('load', function (){
+                $('#viz_loader').fadeOut();
+                setTimeout(() => { $(this).fadeIn(); }, 500);
+            });
+
+
+            function template(url){
+                return '<iframe src="' + url + '" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="display: none;"></iframe>';
+            }
+
+        });
+
+    </script>
+</body>
+</html>
