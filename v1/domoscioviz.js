@@ -1,7 +1,7 @@
 /* DomoscioViz v1.0.3 (Custom Build)
  * Dependencies : jQuery (https://jquery.com/)
  * Minify with https://skalman.github.io/UglifyJS-online/
- * Build: https://domoscio.com/ | https://github.com/Celumproject/domoscio_js
+ * Build: https://domoscio.com/ | https://github.com/Celumproject/domoscio-viz-sdk-js
  */
 
 //#######################################################//
